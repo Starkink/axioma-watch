@@ -161,4 +161,6 @@ async function main() {
   fs.writeFileSync(STATE, JSON.stringify(state, null, 2));
 }
 
+if (process.env.WATCH_TEST === 'true') await say('<b>Проверка связи</b>
+Наблюдатель снаружи на месте: раз в 5 минут смотрит сайт и кабинет.', {});
 await main();
